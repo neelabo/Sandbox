@@ -11,7 +11,7 @@
 
 ABCDE **ABCDE** *ABCDE* ~~ABCDE~~ __ABCDE__
 
-# Sub x1
+#  Sub x1
 ## Sub x2
 ### Sub x3
 #### Sub x4
@@ -24,8 +24,7 @@ ABCDE **ABCDE** *ABCDE* ~~ABCDE~~ __ABCDE__
     - indent 1
     - indent 2
 
-### Table
-
+### :pushpin:  Table
 
 |a|b|c|
 |---|---|---|
@@ -33,6 +32,9 @@ ABCDE **ABCDE** *ABCDE* ~~ABCDE~~ __ABCDE__
 
 > [!NOTE]
 > ほげほげ
+
+:warning: ブラウザにより挙動が変わることが有ります。  
+:warning: IEでは、IEの設定で保護モードを無効にしないと機能しません。
 
 This is a `nice` pen.
 
@@ -44,3 +46,4 @@ int i = 0; //コード
 >> bbb 
 >> bbb2
 
+gi
