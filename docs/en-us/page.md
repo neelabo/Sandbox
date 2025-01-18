@@ -1,5 +1,3 @@
-<div id="lang" style="text-align: right; font-weight: bold;"><a href="../ja-jp/page.html">JA</a> / <u>EN</u></div>
-
 This is a sample page.
 
 - Go to [Home](.) (current directory)

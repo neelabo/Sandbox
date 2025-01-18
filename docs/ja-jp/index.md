@@ -1,5 +1,3 @@
-<div id="lang" style="text-align: right; font-weight: bold;"><u>JA</u> / <a href="../en-us/index.html">EN</a></div>
-
 # Top Page
 
 ![App Icon](../assets/images/sample.png)

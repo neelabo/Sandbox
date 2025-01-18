@@ -1,6 +1,4 @@
-<div id="lang" style="text-align: right; font-weight: bold;"><u>JA</u> / <a href="../en-us/page.html">EN</a></div>
-
-これはサンプルページです。
+# これはサンプルページです。
 
 - [Home](.) へ移動 (current directory)
 - [Home](/Sandbox/ja-jp/) へ移動 (absolute directory)
