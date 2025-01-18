@@ -44,17 +44,3 @@ int i = 0; //コード
 >> bbb 
 >> bbb2
 
-<script>
-    function redirectURL() {
-      const language = window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
-      if (language.startsWith('ja')) {
-        location.href = `/ja-jp/`;
-      }
-      else {
-        location.href = `/en-us/`;
-      }
-    }
-
-    redirectURL();
-</script>
-
