@@ -1,17 +1,27 @@
 <head>
     <title>Some Title</title>
     <style>
-        div.culture-switch {
+        .culture-switch {
             text-align: right;
-            /*font-weight: bold;*/
+            margin-right: 0.5em;
+        }
+
+        .header-text {
+            color: #fff;
+        }
+
+        .header-text a {
+            color: #fff;
         }
     </style>
 </head>
+
 <body>
-    <div id="cultureSwitch" class="culture-switch"></div>
+    <div style="padding: 1em; background-color: #888;">
+        <div id="cultureSwitch" class="culture-switch header-text"></div>
+    </div>
     <p>
         <div id="t1"></div>
-
     </p>
     <p>
         This is Test Page.
@@ -19,9 +29,7 @@
 
     <script>
         function setCultureSwitch() {
-            const japanese = "日本語"
-            const english = "English"
-            
+
             var element = document.getElementById("cultureSwitch");
             if (element == null) return;
 
@@ -31,9 +39,11 @@
             switch (path[cultureIndex]) {
                 case "ja-jp":
                     var nextCulture = "en-us";
+                    var nextCultureString = "ENGLISH"
                     break;
                 case "en-us":
                     var nextCulture = "ja-jp";
+                    var nextCultureString = "日本語"
                     break;
                 default:
                     return;
@@ -41,15 +51,8 @@
 
             path[cultureIndex] = nextCulture;
             var nextPath = path.join('/');
-            
-            if (nextCulture == "ja-jp") {
-                var text = `<u>${english}</u> / <a href=\"${nextPath}\">${japanese}</a>`;
-            }
-            else {
-                var text = `<a href=\"${nextPath}\">${english}</a> / <u>${japanese}</u>`;
-            }
 
-            element.innerHTML = text;
+            element.innerHTML = `<a href=\"${nextPath}\">${nextCultureString}</a>`;
 
             // [dev]
             document.getElementById("t1").innerHTML = location.pathname;
