@@ -31,9 +31,7 @@
           {% endif %}
 
             <!-- CULTURE SWITCH -->
-            <section>
-                <div id="cultureSwitch" class="culture-switch header-text">HEADER: Hello, World!</div>
-            </section>
+            <div id="culture_switch" class="culture-switch header-text">HEADER: Hello, World!</div>
           
         </header>
     </div>
@@ -60,7 +58,7 @@
     <script>
         function setCultureSwitch() {
 
-            var element = document.getElementById("cultureSwitch");
+            var element = document.getElementById("culture_switch");
             if (element == null) return;
 
             var path = location.pathname.split('/');
