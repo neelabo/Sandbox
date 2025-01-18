@@ -32,7 +32,7 @@
 
             <!-- TEST -->
             <section>
-                <div id="cultureSwitch" class="culture-switch">HEADER: Hello, World!</div>
+                <div id="cultureSwitch" class="culture-switch" style="color: #fff;">HEADER: Hello, World!</div>
             </section>
           
         </header>
@@ -44,7 +44,7 @@
 
         <!-- TEST -->
         <section>
-            <div id="cultureSwitch" class="culture-switch">BODY: Hello, World!</div>
+            <div id="cultureSwitchOther" class="culture-switch">BODY: Hello, World!</div>
         </section>
 
       <section id="main_content" class="inner">
@@ -61,5 +61,44 @@
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+    
+    <!-- for CultureSwitch -->
+    <script>
+        function setCultureSwitch() {
+            const japanese = "日本語"
+            const english = "English"
+            
+            var element = document.getElementById("cultureSwitch");
+            if (element == null) return;
+
+            var path = location.pathname.split('/');
+            var cultureIndex = path.length - 2;
+
+            switch (path[cultureIndex]) {
+                case "ja-jp":
+                    var nextCulture = "en-us";
+                    break;
+                case "en-us":
+                    var nextCulture = "ja-jp";
+                    break;
+                default:
+                    return;
+            }
+
+            path[cultureIndex] = nextCulture;
+            var nextPath = path.join('/');
+            
+            if (nextCulture == "ja-jp") {
+                var text = `<u>${english}</u> / <a href=\"${nextPath}\">${japanese}</a>`;
+            }
+            else {
+                var text = `<a href=\"${nextPath}\">${english}</a> / <u>${japanese}</u>`;
+            }
+
+            element.innerHTML = text;
+        }
+        setCultureSwitch();
+    </script>
+
   </body>
 </html>
