@@ -139,10 +139,6 @@
         {% capture anchor %}{{ anchor }} {{ include.anchorAttrs | replace: '%heading%', escaped_header | replace: '%html_id%', html_id }}{% endcapture %}
       {% endif %}
 
-      <!--
-        {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', escaped_header | default: '' }}</a>{% endcapture %}
-        -->
-
       {% capture anchor_start %}<a {{ anchor }}>{% endcapture %}
       {% capture anchor_end %}</a>{% endcapture %}
 
