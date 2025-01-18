@@ -1,4 +1,4 @@
-<div id="lang" style="text-align: right; font-weight: bold;"><a href="../ja-jp/README.md">JA</a> / <u>EN</u></div>
+<div id="lang" style="text-align: right; font-weight: bold;"><a href="../ja-jp/index.html">JA</a> / <u>EN</u></div>
 
 # Top Page
 

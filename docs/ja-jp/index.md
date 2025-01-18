@@ -1,4 +1,4 @@
-<div id="lang" style="text-align: right; font-weight: bold;"><u>JA</u> / <a href="../en-us/README.md">EN</a></div>
+<div id="lang" style="text-align: right; font-weight: bold;"><u>JA</u> / <a href="../en-us/index.html">EN</a></div>
 
 # Top Page
 
