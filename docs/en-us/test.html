@@ -1,0 +1,60 @@
+<head>
+    <title>Some Title</title>
+    <style>
+        div.culture-switch {
+            text-align: right;
+            /*font-weight: bold;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="cultureSwitch" class="culture-switch"></div>
+    <p>
+        <div id="t1"></div>
+
+    </p>
+    <p>
+        This is Test Page.
+    </p>
+
+    <script>
+        function setCultureSwitch() {
+            const japanese = "日本語"
+            const english = "English"
+            
+            var element = document.getElementById("cultureSwitch");
+            if (element == null) return;
+
+            var path = location.pathname.split('/');
+            var cultureIndex = path.length - 2;
+
+            switch (path[cultureIndex]) {
+                case "ja-jp":
+                    var nextCulture = "en-us";
+                    break;
+                case "en-us":
+                    var nextCulture = "ja-jp";
+                    break;
+                default:
+                    return;
+            }
+
+            path[cultureIndex] = nextCulture;
+            var nextPath = path.join('/');
+            
+            if (nextCulture == "ja-jp") {
+                var text = `<u>${english}</u> / <a href=\"${nextPath}\">${japanese}</a>`;
+            }
+            else {
+                var text = `<a href=\"${nextPath}\">${english}</a> / <u>${japanese}</u>`;
+            }
+
+            element.innerHTML = text;
+
+            // [dev]
+            document.getElementById("t1").innerHTML = location.pathname;
+        }
+        setCultureSwitch();
+    </script>
+
+</body>

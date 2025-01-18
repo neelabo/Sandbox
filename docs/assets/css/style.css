@@ -2,3 +2,9 @@
 ---
 
 @import "jekyll-theme-slate";
+
+
+div.culture-switch {
+    text-align: right;
+    /*font-weight: bold;*/
+}
