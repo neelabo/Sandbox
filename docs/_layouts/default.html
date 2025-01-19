@@ -5,11 +5,12 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
-{% seo %}
+    
+    {% seo %}
     {% include head-custom.html %}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
   </head>
 
   <body>
@@ -31,9 +32,7 @@
             </section>
           {% endif %}
 
-            <!-- CULTURE SWITCH -->
-            <div id="culture_switch" class="culture-switch header-text"></div>
-          
+          {% include culture-switch.html %}
         </header>
     </div>
 
@@ -54,9 +53,6 @@
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    
-    <!-- for CultureSwitch -->
-    <script src="{{ '/assets/js/culture.js' | relative_url }}"></script>
 
   </body>
 </html>
