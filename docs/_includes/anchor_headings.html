@@ -149,9 +149,7 @@
       {% endif %}
     {% endif %}
 
-    {% capture new_heading %}
-<h{{ _hAttrToStrip }}{{ include.bodyPrefix }} {{ header }} {{ include.bodySuffix }}</h{{ headerLevel }}>
-    {% endcapture %}
+    {% capture new_heading %}<h{{ _hAttrToStrip }}{{ header }}</h{{ headerLevel }}>{% endcapture %}
 
     <!--
     If we have content after the `</hX>` tag, then we'll want to append that here so we don't lost any content.
