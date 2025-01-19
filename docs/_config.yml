@@ -1,1 +1,11 @@
 theme: jekyll-theme-slate
+
+defaults:
+- scope:
+    path: 'en-us'
+  values:
+    language: en-US
+- scope:
+    path: 'ja-jp'
+  values:
+    language: ja-JP
