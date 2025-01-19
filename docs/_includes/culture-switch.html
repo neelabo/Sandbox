@@ -43,7 +43,8 @@
         if ($culture == null) return;
         const element = document.getElementById("culture_home");
         if (element == null) return;
-        element.innerHTML = `<a href=\"{{ site.baseurl }}/${culture}/\">HOME</a>`;
+        const baseUrl = "{{ site.baseurl }}";
+        element.innerHTML = `<a href=\"${baseUrl}/${culture}/\">HOME</a>`;
     }
 
     function setCultureElement() {
