@@ -49,8 +49,8 @@
     function setCultureElement() {
         $culture = getCurrentCulture();
         if ($culture == null) return;
-        setCultureSwitch($current);
-        setCultureHome($current);
+        setCultureSwitch($culture);
+        setCultureHome($culture);
     }
 
     setCultureElement();

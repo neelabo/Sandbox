@@ -5,7 +5,9 @@ defaults:
     path: 'en-us'
   values:
     language: en-US
+    description: Private GitHub test page.
 - scope:
     path: 'ja-jp'
   values:
     language: ja-JP
+    description: プライベートなGitHubテストページ。
