@@ -15,8 +15,8 @@
         }
     }
 
-    function setCultureSwitch($culture) {
-        switch ($culture) {
+    function setCultureSwitch(culture) {
+        switch (culture) {
             case "ja-jp":
                 var nextCulture = "en-us";
                 var nextCultureString = "ENGLISH"
@@ -39,19 +39,18 @@
         element.innerHTML = `<a href=\"${nextPath}\">${nextCultureString}</a>`;
     }
 
-    function setCultureHome($culture) {
-        if ($culture == null) return;
+    function setCultureHome(culture) {
+        if (culture == null) return;
         const element = document.getElementById("culture_home");
         if (element == null) return;
-        const baseUrl = "{{ site.baseurl }}";
-        element.innerHTML = `<a href=\"${baseUrl}/${culture}/\">HOME</a>`;
+        element.innerHTML = `<a href=\"{{ site.baseurl }}/${culture}/\">HOME</a>`;
     }
 
     function setCultureElement() {
-        $culture = getCurrentCulture();
-        if ($culture == null) return;
-        setCultureSwitch($culture);
-        setCultureHome($culture);
+        const culture = getCurrentCulture();
+        if (culture == null) return;
+        setCultureSwitch(culture);
+        setCultureHome(culture);
     }
 
     setCultureElement();
