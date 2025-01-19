@@ -6,22 +6,39 @@
             margin-right: 0.5em;
         }
 
-        .header-text {
+        #culture_switch {
+            text-align: right;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
             color: #fff;
         }
 
-        .header-text a {
+        #culture_switch a {
+            color: #fff;
+        }
+
+        #culture_home {
+            text-align: left;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+        }
+
+        #culture_home a {
             color: #fff;
         }
     </style>
 </head>
 
 <body>
-    <div style="padding: 1em; background-color: #888;">
-        <div id="cultureSwitch" class="culture-switch header-text"></div>
+    <div style="padding: 1em; height: 500px; background-color: #888; position: relative;">
+        <div id="culture_switch"></div>
+        <div id="culture_home"><a href="test">HOME</a></div>
     </div>
     <p>
-        <div id="t1"></div>
+    <div id="t1"></div>
     </p>
     <p>
         This is Test Page.
@@ -30,7 +47,7 @@
     <script>
         function setCultureSwitch() {
 
-            var element = document.getElementById("cultureSwitch");
+            var element = document.getElementById("culture_switch");
             if (element == null) return;
 
             var path = location.pathname.split('/');
