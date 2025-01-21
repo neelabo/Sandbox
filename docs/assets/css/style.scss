@@ -1,7 +1,4 @@
----
----
-
-@import "{{ site.theme }}";
+--- --- @import "{{ site.theme }}";
 
 .inner {
     max-width: 1012px;
@@ -31,3 +28,61 @@
     color: #fff;
 }
 
+.table-normal {
+    width: 100%;
+    margin: 20px 0 30px;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    border-spacing: 0;
+}
+
+.table-normal th {
+    background: #EEE;
+}
+
+.table-normal th,
+.table-normal td {
+    font-size: 14px;
+    font-family: Consolas;
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    padding: 7px;
+}
+
+.table-none {
+    border-collapse: collapse;
+    margin: 20px 0 30px;
+}
+
+.table-none td,
+.table-none th {
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.table-slim {
+    border-collapse: collapse;
+    margin: 20px 0 30px;
+}
+
+.table-slim tr {
+    border-bottom: 1px solid #CCC;
+}
+
+.table-slim tr:nth-child(1) {
+    border-top: 1px solid #CCC;
+}
+
+.table-slim td,
+.table-slim th {
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.table-topless tr:nth-child(1) {
+    border-top: 0px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
