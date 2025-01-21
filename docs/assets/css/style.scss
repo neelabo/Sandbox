@@ -32,6 +32,7 @@
 }
 
 .table-normal {
+    border: 0px;
     width: 100%;
     margin: 20px 0 30px;
     border-top: 1px solid #CCC;
@@ -53,6 +54,7 @@
 }
 
 .table-none {
+    border: 0px;
     border-collapse: collapse;
     margin: 20px 0 30px;
 }
@@ -64,6 +66,7 @@
 }
 
 .table-slim {
+    border: 0px;
     border-collapse: collapse;
     margin: 20px 0 30px;
 }
