@@ -41,11 +41,13 @@
 }
 
 .table-normal th {
+    border: 0px;
     background: #EEE;
 }
 
 .table-normal th,
 .table-normal td {
+    border: 0px;
     font-size: 14px;
     font-family: Consolas;
     border-bottom: 1px solid #CCC;
@@ -61,6 +63,7 @@
 
 .table-none td,
 .table-none th {
+    border: 0px;
     text-align: left;
     padding: 10px 20px;
 }
@@ -72,6 +75,7 @@
 }
 
 .table-slim tr {
+    border: 0px;
     border-bottom: 1px solid #CCC;
 }
 
@@ -81,6 +85,7 @@
 
 .table-slim td,
 .table-slim th {
+    border: 0px;
     text-align: left;
     padding: 10px 20px;
 }
