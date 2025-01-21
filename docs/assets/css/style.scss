@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-{% if page.language == "ja-jp" %}
+{% if page.language == "ja-JP" %}
 body {
     font-family: Arial, sans-serif;
 }
