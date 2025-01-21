@@ -3,12 +3,6 @@
 
 @import "{{ site.theme }}";
 
-{% if page.language == "ja-JP" %}
-body {
-    font-family: Arial, sans-serif;
-}
-{% endif %}
-
 .inner {
     max-width: 1012px;
 }

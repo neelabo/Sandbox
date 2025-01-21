@@ -10,7 +10,13 @@
     
     {% seo %}
     {% include head-custom.html %}
-    
+    {% if page.language == "ja-JP" %}
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+    {% endif %}
   </head>
 
   <body>
