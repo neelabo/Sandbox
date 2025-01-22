@@ -20,7 +20,7 @@
     {% capture new_node %}<blockquote>{{ node }}{% endcapture %}
 
     {% capture alert_note %}<blockquote class="alert note"><p class="alert note"><img src="{{ '/assets/octicons/info.svg' | relative_url }}"/>Note</p><p>{% endcapture %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', alert_note %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', '<blockquote><p>**NOTE**' %}
 
     {% capture edited_html %}{{ edited_html }}{{ new_node }}{% endcapture %}
 
