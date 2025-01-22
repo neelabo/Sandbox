@@ -2,17 +2,18 @@
   {% assign nodes = include.html | split: '<blockquote>' %}
 
   {% capture edited_html %}{% endcapture %}
+  {% assign is_head_node = true %}
 
   {% for _node in nodes %}
 
     {% capture node %}{{ _node | strip }}{% endcapture %}
 
-    {% increment block_count %}
-    {% if block_count == 0 %}
+    {% if is_head_node %}
+      {% assign is_head_node = false %}
       {% capture edited_html %}{{ edited_html }}{{ node }}{% endcapture %}
       {% continue %}
     {% endif %}
-
+    
     {% if node == '' %}
       {% continue %}
     {% endif %}
