@@ -10,13 +10,7 @@
     
     {% seo %}
     {% include head-custom.html %}
-    {% if page.language == "ja-JP" %}
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-    </style>
-    {% endif %}
+
   </head>
 
   <body>
@@ -46,7 +40,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        {% include anchor_headings.html html=content anchorBody="#" %}
+        {% include anchor_headings.html html=content %}
       </section>
     </div>
 

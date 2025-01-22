@@ -13,3 +13,21 @@
 - [検索オプション](search-options.html)
 - [メイン メニュー](main-menu.html)
 - [コマンド一覧](command-list.html)
+
+### code embedded
+This is a `green` pen.
+
+### code block 
+```
+#include <stdio.h>
+printf("Hello, World!);
+```
+```c
+#include <stdio.h>
+printf("Hello, World!);
+```
+``` for (int i=0; i<100; i++) { Debug.WriteLine(i); } ```
+
+### quote block
+> 引用  
+> ですよね？
