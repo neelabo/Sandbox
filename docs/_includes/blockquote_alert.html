@@ -31,7 +31,7 @@
     {% assign new_node = new_node | replace: '<blockquote><p>[!IMPORTANT]<br />', alert_important %}
     {% assign new_node = new_node | replace: '<blockquote><p>[!IMPORTANT]', alert_important %}
 
-    {% capture alert_warning %}<blockquote class="alert warming"><p class="alert warming"><img src="{{ include.baseUrl }}/assets/octicons/alert.svg">Warning</p><p>{% endcapture %}
+    {% capture alert_warning %}<blockquote class="alert warning"><p class="alert warning"><img src="{{ include.baseUrl }}/assets/octicons/alert.svg">Warning</p><p>{% endcapture %}
     {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]<br />', alert_warning %}
     {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]', alert_warning %}
 
