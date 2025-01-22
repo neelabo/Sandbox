@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 </html>
 
 <head>
   <link rel="stylesheet" type="text/css" media="screen" href="default.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="custom.css">
   <style>
 
     body:lang(ja) {
@@ -44,6 +45,23 @@
         max-width: 1012px;
     }
 
+    p.alert {
+      display: flex;
+      margin: 10px 0 0 0;
+      font-weight: bold;
+    }
+
+    p.alert img {
+      margin-right: 8px;
+      margin-bottom: 2px;
+    }
+
+    p.alert.note {
+      color: var(--alert-note-color);
+    }
+
+
+
   </style>
 </head>
 
@@ -78,6 +96,17 @@ Printf ("Hello, World!");
         <p>This is a blockquote following a header.</p>
 
         <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+      </blockquote>
+
+      <!-- pending -->
+      <blockquote class="alert note">
+        <p class="alert note">
+          <img src="../assets/octicons/info.svg" />
+          Note
+        </p>
+        <p>
+          This is test.
+        </p>
       </blockquote>
 
       <h3 id="header-3">Header 3</h3>

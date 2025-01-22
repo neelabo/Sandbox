@@ -70,6 +70,22 @@ blockquote.alert.caution {
     border-left-color: var(--alert-caution-color);
 }
 
+p.alert {
+    display: flex;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+
+p.alert img {
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+p.alert.note {
+    color: var(--alert-note-color);
+}
+
+/*
 span.alert {
     font-weight: bold;
 }
@@ -93,6 +109,7 @@ span.alert.warning {
 span.alert.caution {
     color: var(--alert-caution-color);
 }
+*/
 
 .inner {
     max-width: 1012px;
@@ -125,4 +142,3 @@ span.alert.caution {
 #culture_home a {
     color: #fff;
 }
-
