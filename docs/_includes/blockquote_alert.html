@@ -17,15 +17,11 @@
       {% continue %}
     {% endif %}
 
-    {% assign alert = '' %}
-    {% assign new_node = node %}
+    {% capture new_node %}<blockquote>{{ node }}{% endcapture %}
 
-    {% capture new_blockquote %}<blockquote>{% endcapture %}
-    {% if alert != '' %}
-      {% capture new_blockquote %}<blockquote class="alert {{ alert }}">{% endcapture %}
-    {% endif %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', '<blockquote class="alert note"><p><span>Note</span>' %}
 
-    {% capture edited_html %}{{ edited_html }}{{new_blockquote}}{{ new_node }}{% endcapture %}
+    {% capture edited_html %}{{ edited_html }}{{ new_node }}{% endcapture %}
 
   {% endfor %}
 {% endcapture %}{% assign _workspace = '' %}{{ edited_html | strip }}
