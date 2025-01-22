@@ -21,24 +21,24 @@
     {% capture new_node %}<blockquote>{{ node }}{% endcapture %}
 
     {% capture alert_note %}<blockquote class="alert note"><p class="alert note"><img src="{{ include.baseUrl }}/assets/octicons/info.svg">Note</p><p>{% endcapture %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]<br />', alert_note %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', alert_note %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!NOTE]<br />', alert_note %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!NOTE]', alert_note %}
 
     {% capture alert_tip %}<blockquote class="alert tip"><p class="alert tip"><img src="{{ include.baseUrl }}/assets/octicons/light-bulb.svg">Tip</p><p>{% endcapture %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!TIP]<br />', alert_tip %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!TIP]', alert_tip %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!TIP]<br />', alert_tip %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!TIP]', alert_tip %}
 
     {% capture alert_important %}<blockquote class="alert important"><p class="alert important"><img src="{{ include.baseUrl }}/assets/octicons/report.svg">Important</p><p>{% endcapture %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!IMPORTANT]<br />', alert_important %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!IMPORTANT]', alert_important %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!IMPORTANT]<br />', alert_important %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!IMPORTANT]', alert_important %}
 
     {% capture alert_warning %}<blockquote class="alert warning"><p class="alert warning"><img src="{{ include.baseUrl }}/assets/octicons/alert.svg">Warning</p><p>{% endcapture %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]<br />', alert_warning %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]', alert_warning %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!WARNING]<br />', alert_warning %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!WARNING]', alert_warning %}
 
     {% capture alert_caution %}<blockquote class="alert caution"><p class="alert caution"><img src="{{ include.baseUrl }}/assets/octicons/stop.svg">Caution</p><p>{% endcapture %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!CAUTION]<br />', alert_caution %}
-    {% assign new_node = new_node | replace: '<blockquote><p>[!CAUTION]', alert_caution %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!CAUTION]<br />', alert_caution %}
+    {% assign new_node = new_node | replace_first: '<blockquote><p>[!CAUTION]', alert_caution %}
     
 
     {% capture edited_html %}{{ edited_html }}{{ new_node }}{% endcapture %}
