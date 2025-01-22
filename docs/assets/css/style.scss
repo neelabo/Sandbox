@@ -3,6 +3,14 @@
 
 @import "{{ site.theme }}";
 
+:root {
+    --alert-note-color: #0969da;
+    --alert-tip-color: #1a7f37;
+    --alert-important-color: #8250df;
+    --alert-warning-color: #9a6700;
+    --alert-caution-color: #cf222e;
+}
+
 body:lang(ja) {
     font-family: Arial, sans-serif;
 }
@@ -36,6 +44,57 @@ th {
     font-weight: bold;
 }
 
+blockquote.alert {
+    margin: 1em 0;
+    padding: 0.1em;
+    color: inherit;
+    border-left: .25em solid gray;
+}
+
+blockquote.alert.note {
+    border-left-color: var(--alert-note-color);
+}
+
+blockquote.alert.tip {
+    border-left-color: var(--alert-tip-color);
+}
+
+blockquote.alert.important {
+    border-left-color: var(--alert-important-color);
+}
+
+blockquote.alert.warning {
+    border-left-color: var(--alert-warning-color);
+}
+
+blockquote.alert.caution {
+    border-left-color: var(--alert-caution-color);
+}
+
+span.alert {
+    font-weight: bold;
+}
+
+span.alert.note {
+    color: var(--alert-note-color);
+}
+
+span.alert.tip {
+    color: var(--alert-tip-color);
+}
+
+span.alert.important {
+    color: var(--alert-important-color);
+}
+
+span.alert.warning {
+    color: var(--alert-warning-color);
+}
+
+span.alert.caution {
+    color: var(--alert-caution-color);
+}
+
 .inner {
     max-width: 1012px;
 }
@@ -67,3 +126,4 @@ th {
 #culture_home a {
     color: #fff;
 }
+

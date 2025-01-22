@@ -41,7 +41,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         {% capture ex_content %}{% include anchor_headings.html html=content %}{% endcapture %}
-        {{ ex_content }}
+        {% include blockquote_alert.html html=content %}
       </section>
     </div>
 

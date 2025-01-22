@@ -1,0 +1,25 @@
+{% capture _workspace %}
+  {% assign nodes = include.html | split: '<blockquote>' %}
+
+  {% capture edited_html %}{% endcapture %}
+
+  {% for _node in nodes %}
+
+    {% capture node %}{{ _node | strip }}{% endcapture %}
+
+    {% increment block_count %}
+    {% if block_count == 0 %}
+      {% capture edited_html %}{{ edited_html }}{{ node }}{% endcapture %}
+      {% continue %}
+    {% endif %}
+
+    {% if node == "" %}
+      {% continue %}
+    {% endif %}
+
+    {% capture new_blockquote %}<blockquote class="alert.note">{% endcapture %}
+
+    {% capture edited_html %}{{ edited_html }}{{new_blockquote}}{{ node }}{% endcapture %}
+
+  {% endfor %}
+{% endcapture %}{% assign _workspace = '' %}{{ edited_html | strip }}
