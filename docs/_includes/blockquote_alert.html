@@ -19,7 +19,8 @@
 
     {% capture new_node %}<blockquote>{{ node }}{% endcapture %}
 
-    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', '<blockquote class="alert note"><p><span>Note</span>' %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', '<blockquote class="alert note"><p><span class="alert note">Note</span>' %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]', '<blockquote class="alert warning"><p><span class="alert warning">Warning</span>' %}
 
     {% capture edited_html %}{{ edited_html }}{{ new_node }}{% endcapture %}
 
