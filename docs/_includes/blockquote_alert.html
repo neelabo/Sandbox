@@ -19,6 +19,7 @@
 
     {% assign alert = '' %}
     {% assign new_node = node %}
+    
     {% if node startswith '<p>[!NOTE]' %}
       {% assign alert = 'note' %}
       {% assign new_node = node | replace_first: '<p>[!NOTE]', '<p><span>Note</span>' %}
@@ -26,7 +27,7 @@
 
     {% capture new_blockquote %}<blockquote>{% endcapture %}
     {% if alert != '' %}
-      {% capture new_blockquote %}<blockquote class="alert {{ note }}">{% endcapture %}
+      {% capture new_blockquote %}<blockquote class="alert {{ alert }}">{% endcapture %}
     {% endif %}
 
     {% capture edited_html %}{{ edited_html }}{{new_blockquote}}{{ new_node }}{% endcapture %}
