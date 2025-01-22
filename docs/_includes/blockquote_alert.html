@@ -20,7 +20,12 @@
     {% capture new_node %}<blockquote>{{ node }}{% endcapture %}
 
     {% capture alert_note %}<blockquote class="alert note"><p class="alert note"><img src="{{ include.baseUrl }}/assets/octicons/info.svg">Note</p><p>{% endcapture %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]<br />', alert_note %}
     {% assign new_node = new_node | replace: '<blockquote><p>[!NOTE]', alert_note %}
+
+    {% capture alert_warning %}<blockquote class="alert warming"><p class="alert warming"><img src="{{ include.baseUrl }}/assets/octicons/warning.svg">Warning</p><p>{% endcapture %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]<br />', alert_warning %}
+    {% assign new_node = new_node | replace: '<blockquote><p>[!WARNING]', alert_warning %}
 
     {% capture edited_html %}{{ edited_html }}{{ new_node }}{% endcapture %}
 
