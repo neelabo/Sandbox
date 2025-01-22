@@ -3,8 +3,45 @@
 
 @import "{{ site.theme }}";
 
+body:lang(ja) {
+    font-family: Arial, sans-serif;
+}
+
+blockquote {
+    color: #555;
+    border-left: 3px solid #888;
+}
+
+table {
+    border: 0px;
+    border-collapse: collapse;
+    margin: 20px 0 30px;
+}
+
+td,
+th {
+    border: 0px;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+td {
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+th {
+    color: initial;
+    background: none;
+    font-weight: bold;
+}
+
 .inner {
     max-width: 1012px;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 #culture_switch {
@@ -29,89 +66,4 @@
 
 #culture_home a {
     color: #fff;
-}
-
-.table-normal {
-    border: 0px;
-    width: 100%;
-    margin: 20px 0 30px;
-    border-top: 1px solid #CCC;
-    border-left: 1px solid #CCC;
-    border-spacing: 0;
-}
-
-// .table-normal th {
-//     border: 0px;
-//     background: #EEE;
-// }
-
-.table-normal th,
-.table-normal td {
-    border: 0px;
-    font-size: 14px;
-    font-family: Consolas;
-    border-bottom: 1px solid #CCC;
-    border-right: 1px solid #CCC;
-    padding: 7px;
-}
-
-.table-normal th {
-    color: initial;
-    background: none;
-    font-weight: bold;
-}
-
-.table-none {
-    border: 0px;
-    border-collapse: collapse;
-    margin: 20px 0 30px;
-}
-
-.table-none td,
-.table-none th {
-    border: 0px;
-    text-align: left;
-    padding: 10px 20px;
-}
-
-.table-none th {
-    color: initial;
-    background: none;
-    font-weight: bold;
-}
-
-.table-slim {
-    border: 0px;
-    border-collapse: collapse;
-    margin: 20px 0 30px;
-}
-
-.table-slim tr {
-    border: 0px;
-    border-bottom: 1px solid #CCC;
-}
-
-.table-slim tr:nth-child(1) {
-    border-top: 1px solid #CCC;
-}
-
-.table-slim td,
-.table-slim th {
-    border: 0px;
-    text-align: left;
-    padding: 10px 20px;
-}
-
-.table-slim th {
-    color: initial;
-    background: none;
-    font-weight: bold;
-}
-
-.table-topless tr:nth-child(1) {
-    border-top: 0px;
-}
-
-.nowrap {
-    white-space: nowrap;
 }
