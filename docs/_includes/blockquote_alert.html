@@ -13,13 +13,23 @@
       {% continue %}
     {% endif %}
 
-    {% if node == "" %}
+    {% if node == '' %}
       {% continue %}
     {% endif %}
 
-    {% capture new_blockquote %}<blockquote class="alert.note">{% endcapture %}
+    {% assign alert = '' %}
+    {% assign new_node = node %}
+    {% if node startswith '<p>[!NOTE]' %}
+      {% assign alert = 'note' %}
+      {% assign new_node = node | replace_first: '<p>[!NOTE]', '<p><span>Note</span>' %}
+    {% endif %}
 
-    {% capture edited_html %}{{ edited_html }}{{new_blockquote}}{{ node }}{% endcapture %}
+    {% capture new_blockquote %}<blockquote>{% endcapture %}
+    {% if alert != '' %}
+      {% capture new_blockquote %}<blockquote class="alert {{ note }}">{% endcapture %}
+    {% endif %}
+
+    {% capture edited_html %}{{ edited_html }}{{new_blockquote}}{{ new_node }}{% endcapture %}
 
   {% endfor %}
 {% endcapture %}{% assign _workspace = '' %}{{ edited_html | strip }}
