@@ -85,31 +85,21 @@ p.alert.note {
     color: var(--alert-note-color);
 }
 
-/*
-span.alert {
-    font-weight: bold;
-}
-
-span.alert.note {
-    color: var(--alert-note-color);
-}
-
-span.alert.tip {
+p.alert.tip {
     color: var(--alert-tip-color);
 }
 
-span.alert.important {
+p.alert.important {
     color: var(--alert-important-color);
 }
 
-span.alert.warning {
+p.alert.warning {
     color: var(--alert-warning-color);
 }
 
-span.alert.caution {
+p.alert.caution {
     color: var(--alert-caution-color);
 }
-*/
 
 .inner {
     max-width: 1012px;
