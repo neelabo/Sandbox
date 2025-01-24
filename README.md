@@ -4,5 +4,5 @@ Private GitHub test page.
 
 - [GitHub Pages]( https://neelabo.github.io/Sandbox/)
 
-- [Relative Link Test 1](doc)
-- [Relative Link Test 2](doc/README.md)
+- [Relative Link Test 1](docs)
+- [Relative Link Test 2](docs/README.md)
