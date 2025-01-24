@@ -1,5 +1,9 @@
 theme: jekyll-theme-slate
 
+repository: neelabo/Sandbox
+title: Sandbox
+description: Sample pages.
+
 defaults:
 - scope:
     path: 'en-us'
