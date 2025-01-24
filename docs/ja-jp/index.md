@@ -2,18 +2,31 @@
 
 ![App Icon](../assets/images/sample.png)
 
-> [!NOTE]  
+> [!CAUTION]  
 > [Test Page](page.md) に移動
 
-> [!WARNING]  
+> [!IMPORTANT]  
 > 問題を回避するために、ユーザーの即時の注意が必要な緊急情報。
+
+## Pages !!!!
+
+<ul>
+  {% for a_page in site.html_pages %}
+    {% if a_page.title != page.title %}
+      <li>
+        <a href="{{ site.github.url }}{{ a_page.url }}">{{ a_page.title }} | {{ a_page.url }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+### TOC
 
 - [コマンドライン オプション](commandline-options.html)
 - [スクリプト マニュアル](script-manual.html)
 - [検索オプション](search-options.html)
 - [メイン メニュー](main-menu.html)
 - [コマンド一覧](command-list.html)
-
 
 ### github alert
 
